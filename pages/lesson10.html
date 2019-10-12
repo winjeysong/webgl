@@ -73,12 +73,6 @@
     //使用该着色器程序
     gl.useProgram(program);
 
-    // 随机生成一个颜色。
-    let color = randomColor();
-    // 找到着色器中的全局变量 u_Color;
-    let u_Color = gl.getUniformLocation(program, 'u_Color');
-    // 将随机颜色传递给给全局变量
-    gl.uniform4f(u_Color, color.r, color.g, color.b, color.a);
     // 获取 canvas 尺寸。
     let a_Screen_Size = gl.getAttribLocation(program, 'a_Screen_Size');
     // 将 canvas 尺寸传递给顶点着色器。
